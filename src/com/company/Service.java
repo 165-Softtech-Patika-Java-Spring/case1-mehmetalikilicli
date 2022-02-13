@@ -51,8 +51,8 @@ public class Service {
        return temp;
     }
 
-    int averageHouseArea(){
-    int temp=0;
+    double averageHouseArea(){
+        double temp=0;
 
         List<House> serviceHouseList = EstatesAgent.getHouseList();
         for (int i = 0 ;i< serviceHouseList.size();i++){
@@ -64,8 +64,8 @@ public class Service {
     }
 
 
-    int averageVillaArea(){
-        int temp=0;
+    double averageVillaArea(){
+        double temp=0;
 
         List<Villa> serviceVillaList = EstatesAgent.getVillaList();
         for (int i = 0 ;i< serviceVillaList.size();i++){
@@ -78,8 +78,8 @@ public class Service {
 
 
 
-    int averageSummerHouseArea(){
-        int temp=0;
+    double averageSummerHouseArea(){
+        double temp=0;
 
         List<SummerHouse> serviceSummerHouseList = EstatesAgent.getSummerHouseListList();
         for (int i = 0 ;i< serviceSummerHouseList.size();i++){
@@ -90,20 +90,13 @@ public class Service {
         return temp;
     }
 
-    int averageEstimatesArea(){
-        int temp=0;
+    double averageEstimatesArea(){
+        double temp=0;
 
         temp = averageHouseArea()+averageVillaArea()+averageSummerHouseArea();
 
-
-
         return temp/3;
     }
-
-
-
-
-
 
 
     int totalVillaPrice(List<Villa> List) {
